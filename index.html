@@ -253,23 +253,66 @@
 
   <!-- ═══ GALLERY MASONRY ═══ -->
   <section class="gallery section" id="gallery">
-    <div class="container">
-      <p class="eyebrow text-center reveal" data-es="Nuestro Espacio" data-en="Our Space">Nuestro Espacio</p>
-      <h2 class="section-title text-center reveal"
-          data-es="Momentos de&lt;br/&gt;&lt;em&gt;Pura Serenidad&lt;/em&gt;"
-          data-en="Moments of&lt;br/&gt;&lt;em&gt;Pure Serenity&lt;/em&gt;">
-        Momentos de<br/><em>Pura Serenidad</em>
-      </h2>
+
+    <!-- Drifting watermark -->
+    <div class="gallery__watermark" aria-hidden="true">SERENIDAD</div>
+
+    <div class="gallery__header container">
+      <p class="eyebrow text-center gallery__eyebrow reveal"
+         data-es="Nuestro Espacio" data-en="Our Space">Nuestro Espacio</p>
+      <!-- Title split into two lines so each can animate independently -->
+      <div class="gallery__title-wrap">
+        <div class="gallery__title-line gallery__title-line--1 reveal"
+             data-es="Momentos de" data-en="Moments of">Momentos de</div>
+        <div class="gallery__title-line gallery__title-line--2 reveal"
+             data-es="Pura Serenidad" data-en="Pure Serenity">Pura Serenidad</div>
+      </div>
+      <!-- Animated rule that draws from center outward -->
+      <div class="gallery__rule reveal" style="--delay:.35s"></div>
     </div>
+
     <div class="gallery__masonry">
-      <div class="gallery__item clip-reveal"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="" /></div>
-      <div class="gallery__item clip-reveal" style="--delay:.1s"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="" /></div>
-      <div class="gallery__item clip-reveal" style="--delay:.2s"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80" alt="" /></div>
-      <div class="gallery__item clip-reveal" style="--delay:.05s"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="" /></div>
-      <div class="gallery__item clip-reveal" style="--delay:.15s"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80" alt="" /></div>
-      <div class="gallery__item clip-reveal" style="--delay:.25s"><img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80" alt="" /></div>
-      <div class="gallery__item clip-reveal" style="--delay:.08s"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="" /></div>
-      <div class="gallery__item clip-reveal" style="--delay:.18s"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80" alt="" /></div>
+
+      <div class="gallery__item gi-reveal" style="--gi-delay:0s">
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="" loading="lazy" />
+        <div class="gallery__overlay"><span data-es="Bienestar" data-en="Wellness">Bienestar</span></div>
+      </div>
+
+      <div class="gallery__item gi-reveal" style="--gi-delay:.1s">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="" loading="lazy" />
+        <div class="gallery__overlay"><span data-es="Calma" data-en="Calm">Calma</span></div>
+      </div>
+
+      <div class="gallery__item gi-reveal" style="--gi-delay:.2s">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80" alt="" loading="lazy" />
+        <div class="gallery__overlay"><span data-es="Terapia" data-en="Therapy">Terapia</span></div>
+      </div>
+
+      <div class="gallery__item gi-reveal" style="--gi-delay:.06s">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="" loading="lazy" />
+        <div class="gallery__overlay"><span data-es="Belleza" data-en="Beauty">Belleza</span></div>
+      </div>
+
+      <div class="gallery__item gi-reveal" style="--gi-delay:.16s">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80" alt="" loading="lazy" />
+        <div class="gallery__overlay"><span data-es="Ambiente" data-en="Ambience">Ambiente</span></div>
+      </div>
+
+      <div class="gallery__item gi-reveal" style="--gi-delay:.26s">
+        <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80" alt="" loading="lazy" />
+        <div class="gallery__overlay"><span data-es="Relajación" data-en="Relaxation">Relajación</span></div>
+      </div>
+
+      <div class="gallery__item gi-reveal" style="--gi-delay:.12s">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="" loading="lazy" />
+        <div class="gallery__overlay"><span data-es="Masaje" data-en="Massage">Masaje</span></div>
+      </div>
+
+      <div class="gallery__item gi-reveal" style="--gi-delay:.22s">
+        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80" alt="" loading="lazy" />
+        <div class="gallery__overlay"><span data-es="Armonía" data-en="Harmony">Armonía</span></div>
+      </div>
+
     </div>
   </section>
 
