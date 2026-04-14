@@ -210,47 +210,23 @@ let currentLang = 'es';
 /* ────────────────────────────────────────────
    Apply translations
 ──────────────────────────────────────────── */
-function applyTranslations(lang, animate = false) {
+function applyTranslations(lang) {
   const t = translations[lang];
-  const els = document.querySelectorAll('[data-i18n]');
 
-  if (animate) {
-    // Fade out
-    document.body.classList.add('lang-fade-out');
-  }
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (!t[key]) return;
+    if (t[key].includes('<')) {
+      el.innerHTML = t[key];
+    } else {
+      el.textContent = t[key];
+    }
+  });
 
-  const doUpdate = () => {
-    els.forEach(el => {
-      const key = el.dataset.i18n;
-      if (!t[key]) return;
-      // Some values contain HTML (e.g. <em>, <br/>)
-      if (t[key].includes('<')) {
-        el.innerHTML = t[key];
-      } else {
-        el.textContent = t[key];
-      }
-    });
-
-    // Placeholders
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-      const key = el.dataset.i18nPlaceholder;
-      if (t[key]) el.placeholder = t[key];
-    });
-
-    // Keep html[lang] in sync without triggering browser auto-translate
-    // (attribute is set once; we don't flip it on every toggle)
-  };
-
-  if (animate) {
-    setTimeout(() => {
-      doUpdate();
-      document.body.classList.remove('lang-fade-out');
-      document.body.classList.add('lang-fade-in');
-      setTimeout(() => document.body.classList.remove('lang-fade-in'), 400);
-    }, 220);
-  } else {
-    doUpdate();
-  }
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.dataset.i18nPlaceholder;
+    if (t[key]) el.placeholder = t[key];
+  });
 }
 
 /* ────────────────────────────────────────────
@@ -262,16 +238,8 @@ function initLangToggle() {
 
   btn.addEventListener('click', () => {
     currentLang = currentLang === 'es' ? 'en' : 'es';
-
-    // Drive the active highlight purely via data attribute — no textContent
-    // manipulation, so browser auto-translate cannot interfere.
     btn.dataset.lang = currentLang;
-
-    applyTranslations(currentLang, true);
-
-    // Bounce animation
-    btn.style.transform = 'scale(0.85)';
-    setTimeout(() => { btn.style.transform = ''; }, 180);
+    applyTranslations(currentLang);
   });
 }
 
