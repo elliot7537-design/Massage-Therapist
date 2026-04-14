@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" translate="no" class="notranslate">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google" content="notranslate" />
   <title>Serenidad | Masajes Terapéuticos</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -13,11 +14,11 @@
   <nav class="nav" id="nav">
     <div class="nav__logo">SERENIDAD.</div>
     <ul class="nav__links">
-      <li><a href="#about"    data-i18n="nav.about">Nosotros</a></li>
-      <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
-      <li><a href="#club"     data-i18n="nav.club">Club</a></li>
-      <li><a href="#reviews"  data-i18n="nav.reviews">Reseñas</a></li>
-      <li><a href="#contact"  data-i18n="nav.contact">Contacto</a></li>
+      <li><a href="#about"    data-es="Nosotros"  data-en="About">Nosotros</a></li>
+      <li><a href="#services" data-es="Servicios" data-en="Services">Servicios</a></li>
+      <li><a href="#club"     data-es="Club"      data-en="Club">Club</a></li>
+      <li><a href="#reviews"  data-es="Reseñas"   data-en="Reviews">Reseñas</a></li>
+      <li><a href="#contact"  data-es="Contacto"  data-en="Contact">Contacto</a></li>
     </ul>
     <div class="nav__right">
       <button class="lang-toggle" id="langToggle" aria-label="Switch language" translate="no" data-lang="es">
@@ -25,7 +26,7 @@
         <span class="lang-toggle__sep" aria-hidden="true">|</span>
         <span class="lang-toggle__opt" data-opt="en">EN</span>
       </button>
-      <a href="#book" class="btn btn--outline" data-i18n="nav.book">Reservar</a>
+      <a href="#book" class="btn btn--outline" data-es="Reservar" data-en="Book Now">Reservar</a>
     </div>
     <button class="nav__hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -39,7 +40,6 @@
       <div class="hero__blob hero__blob--2"></div>
     </div>
 
-    <!-- Floating image mosaic -->
     <div class="hero__mosaic">
       <div class="mosaic__item mosaic__item--1 float-anim">
         <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=300&q=80" alt="massage" />
@@ -59,34 +59,39 @@
     </div>
 
     <div class="hero__content reveal">
-      <p class="hero__eyebrow" data-i18n="hero.eyebrow">Tu cuerpo merece esto</p>
+      <p class="hero__eyebrow"
+         data-es="Tu cuerpo merece esto"
+         data-en="Your body deserves this">Tu cuerpo merece esto</p>
       <h1 class="hero__title">
-        <span data-i18n="hero.title1">Tu Cuerpo</span><br/>
-        <em data-i18n="hero.title2">Se Merece Esto</em>
+        <span data-es="Tu Cuerpo"        data-en="Your Body">Tu Cuerpo</span><br/>
+        <em   data-es="Se Merece Esto"   data-en="Deserves This">Se Merece Esto</em>
       </h1>
-      <p class="hero__sub" data-i18n="hero.sub">Descubre el masaje terapéutico que transforma cuerpo y mente. Ubicados en el corazón de México.</p>
+      <p class="hero__sub"
+         data-es="Descubre el masaje terapéutico que transforma cuerpo y mente. Ubicados en el corazón de México."
+         data-en="Discover therapeutic massage that transforms body and mind. Located in the heart of Mexico.">
+        Descubre el masaje terapéutico que transforma cuerpo y mente. Ubicados en el corazón de México.
+      </p>
       <div class="hero__actions">
-        <a href="#book" class="btn btn--primary" data-i18n="hero.cta">Reservar cita</a>
-        <a href="#about" class="btn btn--ghost" data-i18n="hero.learn">Conocer más</a>
+        <a href="#book" class="btn btn--primary" data-es="Reservar cita"  data-en="Book Appointment">Reservar cita</a>
+        <a href="#about" class="btn btn--ghost"  data-es="Conocer más"    data-en="Learn More">Conocer más</a>
       </div>
     </div>
 
-    <!-- Scrolling ticker -->
     <div class="ticker">
       <div class="ticker__track">
-        <span data-i18n="ticker.1">Masaje Terapéutico</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.2">Ciudad de México</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.3">Masaje de Tejido Profundo</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.4">Reflexología</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.5">Aromaterapia</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.6">Masaje Prenatal</span> <span class="ticker__dot">✦</span>
+        <span data-es="Masaje Terapéutico"       data-en="Therapeutic Massage">Masaje Terapéutico</span> <span class="ticker__dot">✦</span>
+        <span data-es="Ciudad de México"          data-en="Mexico City">Ciudad de México</span> <span class="ticker__dot">✦</span>
+        <span data-es="Masaje de Tejido Profundo" data-en="Deep Tissue Massage">Masaje de Tejido Profundo</span> <span class="ticker__dot">✦</span>
+        <span data-es="Reflexología"              data-en="Reflexology">Reflexología</span> <span class="ticker__dot">✦</span>
+        <span data-es="Aromaterapia"              data-en="Aromatherapy">Aromaterapia</span> <span class="ticker__dot">✦</span>
+        <span data-es="Masaje Prenatal"           data-en="Prenatal Massage">Masaje Prenatal</span> <span class="ticker__dot">✦</span>
         <!-- duplicate for seamless loop -->
-        <span data-i18n="ticker.1">Masaje Terapéutico</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.2">Ciudad de México</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.3">Masaje de Tejido Profundo</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.4">Reflexología</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.5">Aromaterapia</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.6">Masaje Prenatal</span> <span class="ticker__dot">✦</span>
+        <span data-es="Masaje Terapéutico"       data-en="Therapeutic Massage">Masaje Terapéutico</span> <span class="ticker__dot">✦</span>
+        <span data-es="Ciudad de México"          data-en="Mexico City">Ciudad de México</span> <span class="ticker__dot">✦</span>
+        <span data-es="Masaje de Tejido Profundo" data-en="Deep Tissue Massage">Masaje de Tejido Profundo</span> <span class="ticker__dot">✦</span>
+        <span data-es="Reflexología"              data-en="Reflexology">Reflexología</span> <span class="ticker__dot">✦</span>
+        <span data-es="Aromaterapia"              data-en="Aromatherapy">Aromaterapia</span> <span class="ticker__dot">✦</span>
+        <span data-es="Masaje Prenatal"           data-en="Prenatal Massage">Masaje Prenatal</span> <span class="ticker__dot">✦</span>
       </div>
     </div>
   </section>
@@ -103,31 +108,44 @@
         </div>
       </div>
       <div class="about__text reveal reveal--right">
-        <p class="eyebrow" data-i18n="about.eyebrow">Nuestra Historia</p>
-        <h2 class="section-title" data-i18n="about.title">La Historia Detrás<br/><em>De Tu Serenidad</em></h2>
-        <p data-i18n="about.p1">Somos un equipo de terapeutas certificados con más de 10 años de experiencia en masajes terapéuticos. Nuestra misión es ayudarte a reconectar con tu cuerpo y encontrar paz interior.</p>
-        <p data-i18n="about.p2">Inspirados en las tradiciones de bienestar mexicanas y técnicas modernas, cada sesión es una experiencia única diseñada especialmente para ti.</p>
-        <a href="#services" class="btn btn--primary" data-i18n="about.cta">Explorar Servicios</a>
+        <p class="eyebrow"
+           data-es="Nuestra Historia"
+           data-en="Our Story">Nuestra Historia</p>
+        <h2 class="section-title"
+            data-es="La Historia Detrás&lt;br/&gt;&lt;em&gt;De Tu Serenidad&lt;/em&gt;"
+            data-en="The Story Behind&lt;br/&gt;&lt;em&gt;Your Serenity&lt;/em&gt;">
+          La Historia Detrás<br/><em>De Tu Serenidad</em>
+        </h2>
+        <p data-es="Somos un equipo de terapeutas certificados con más de 10 años de experiencia en masajes terapéuticos. Nuestra misión es ayudarte a reconectar con tu cuerpo y encontrar paz interior."
+           data-en="We are a team of certified therapists with over 10 years of experience in therapeutic massage. Our mission is to help you reconnect with your body and find inner peace.">
+          Somos un equipo de terapeutas certificados con más de 10 años de experiencia en masajes terapéuticos. Nuestra misión es ayudarte a reconectar con tu cuerpo y encontrar paz interior.
+        </p>
+        <p data-es="Inspirados en las tradiciones de bienestar mexicanas y técnicas modernas, cada sesión es una experiencia única diseñada especialmente para ti."
+           data-en="Inspired by Mexican wellness traditions and modern techniques, each session is a unique experience designed especially for you.">
+          Inspirados en las tradiciones de bienestar mexicanas y técnicas modernas, cada sesión es una experiencia única diseñada especialmente para ti.
+        </p>
+        <a href="#services" class="btn btn--primary"
+           data-es="Explorar Servicios"
+           data-en="Explore Services">Explorar Servicios</a>
       </div>
     </div>
 
-    <!-- Stats bar -->
     <div class="stats">
       <div class="stat reveal">
         <span class="stat__num counter" data-target="12000">0</span><span class="stat__suffix">K+</span>
-        <p class="stat__label" data-i18n="stats.clients">Clientes Felices</p>
+        <p class="stat__label" data-es="Clientes Felices" data-en="Happy Clients">Clientes Felices</p>
       </div>
       <div class="stat reveal">
         <span class="stat__num counter" data-target="10">0</span><span class="stat__suffix">+</span>
-        <p class="stat__label" data-i18n="stats.years">Años de Servicio</p>
+        <p class="stat__label" data-es="Años de Servicio" data-en="Years of Service">Años de Servicio</p>
       </div>
       <div class="stat reveal">
         <span class="stat__num">4.97</span>
-        <p class="stat__label" data-i18n="stats.rating">Calificación Media</p>
+        <p class="stat__label" data-es="Calificación Media" data-en="Average Rating">Calificación Media</p>
       </div>
       <div class="stat reveal">
         <span class="stat__num counter" data-target="12">0</span>
-        <p class="stat__label" data-i18n="stats.therapists">Terapeutas Certificados</p>
+        <p class="stat__label" data-es="Terapeutas Certificados" data-en="Certified Therapists">Terapeutas Certificados</p>
       </div>
     </div>
   </section>
@@ -141,7 +159,6 @@
       <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=400&q=80" alt="" />
       <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=400&q=80" alt="" />
       <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=400&q=80" alt="" />
-      <!-- duplicate -->
       <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80" alt="" />
       <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&q=80" alt="" />
       <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80" alt="" />
@@ -155,7 +172,6 @@
   <section class="treatments section" id="services">
     <div class="treatments__bg-text" aria-hidden="true">BIENESTAR</div>
 
-    <!-- Staggered image collage -->
     <div class="treatments__collage">
       <div class="collage__img collage__img--1 reveal reveal--left">
         <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&q=80" alt="" />
@@ -173,12 +189,19 @@
         <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=500&q=80" alt="" />
       </div>
 
-      <!-- CTA card overlaid on collage -->
       <div class="collage__cta reveal">
         <span class="collage__cta-icon">✦</span>
-        <h3 data-i18n="treatments.title">Tratamientos Para<br/><em>Cada Cuerpo</em></h3>
-        <p data-i18n="treatments.sub">Elige el tratamiento ideal para tus necesidades.</p>
-        <a href="#book" class="btn btn--primary" data-i18n="treatments.cta">Ver Tratamientos</a>
+        <h3 data-es="Tratamientos Para&lt;br/&gt;&lt;em&gt;Cada Cuerpo&lt;/em&gt;"
+            data-en="Treatments For&lt;br/&gt;&lt;em&gt;Every Body&lt;/em&gt;">
+          Tratamientos Para<br/><em>Cada Cuerpo</em>
+        </h3>
+        <p data-es="Elige el tratamiento ideal para tus necesidades."
+           data-en="Choose the ideal treatment for your needs.">
+          Elige el tratamiento ideal para tus necesidades.
+        </p>
+        <a href="#book" class="btn btn--primary"
+           data-es="Ver Tratamientos"
+           data-en="View Treatments">Ver Tratamientos</a>
       </div>
     </div>
   </section>
@@ -186,45 +209,46 @@
   <!-- ───────────── MEMBERSHIP / CLUB ───────────── -->
   <section class="club section" id="club">
     <div class="container">
-      <p class="eyebrow text-center" data-i18n="club.eyebrow">Membresías</p>
-      <h2 class="section-title text-center" data-i18n="club.title">El Club de Bienestar<br/><em>Serenidad</em></h2>
+      <p class="eyebrow text-center" data-es="Membresías"       data-en="Memberships">Membresías</p>
+      <h2 class="section-title text-center"
+          data-es="El Club de Bienestar&lt;br/&gt;&lt;em&gt;Serenidad&lt;/em&gt;"
+          data-en="The Serenidad&lt;br/&gt;&lt;em&gt;Wellness Club&lt;/em&gt;">
+        El Club de Bienestar<br/><em>Serenidad</em>
+      </h2>
 
       <div class="plans">
-        <!-- Serenity -->
         <div class="plan reveal">
-          <p class="plan__name" data-i18n="plans.serenity.name">Serenidad</p>
-          <p class="plan__price">$100<span data-i18n="plans.per">/mes</span></p>
-          <a href="#book" class="btn btn--outline plan__btn" data-i18n="plans.select">Seleccionar</a>
+          <p class="plan__name" data-es="Serenidad"  data-en="Serenity">Serenidad</p>
+          <p class="plan__price">$100<span data-es="/mes" data-en="/mo">/mes</span></p>
+          <a href="#book" class="btn btn--outline plan__btn" data-es="Seleccionar" data-en="Select Plan">Seleccionar</a>
           <ul class="plan__features">
-            <li data-i18n="plans.serenity.f1">1 Masaje Terapéutico al mes</li>
-            <li data-i18n="plans.serenity.f2">Descuento del 10% en productos</li>
-            <li data-i18n="plans.serenity.f3">Acceso a meditaciones guiadas</li>
-            <li data-i18n="plans.serenity.f4">10% de descuento en servicios adicionales</li>
+            <li data-es="1 Masaje Terapéutico al mes"             data-en="1 Therapeutic Massage per month">1 Masaje Terapéutico al mes</li>
+            <li data-es="Descuento del 10% en productos"          data-en="10% discount on products">Descuento del 10% en productos</li>
+            <li data-es="Acceso a meditaciones guiadas"           data-en="Access to guided meditations">Acceso a meditaciones guiadas</li>
+            <li data-es="10% de descuento en servicios adicionales" data-en="10% off additional services">10% de descuento en servicios adicionales</li>
           </ul>
         </div>
-        <!-- Oasis - featured -->
         <div class="plan plan--featured reveal" style="animation-delay:.15s">
-          <span class="plan__badge" data-i18n="plans.popular">Más Popular</span>
-          <p class="plan__name" data-i18n="plans.oasis.name">Oasis</p>
-          <p class="plan__price">$160<span data-i18n="plans.per">/mes</span></p>
-          <a href="#book" class="btn btn--primary plan__btn" data-i18n="plans.select">Seleccionar</a>
+          <span class="plan__badge" data-es="Más Popular" data-en="Most Popular">Más Popular</span>
+          <p class="plan__name" data-es="Oasis" data-en="Oasis">Oasis</p>
+          <p class="plan__price">$160<span data-es="/mes" data-en="/mo">/mes</span></p>
+          <a href="#book" class="btn btn--primary plan__btn" data-es="Seleccionar" data-en="Select Plan">Seleccionar</a>
           <ul class="plan__features">
-            <li data-i18n="plans.oasis.f1">2 Masajes Terapéuticos al mes</li>
-            <li data-i18n="plans.oasis.f2">1 Sesión de Aromaterapia</li>
-            <li data-i18n="plans.oasis.f3">Descuento del 20% en productos</li>
-            <li data-i18n="plans.oasis.f4">15% de descuento en servicios adicionales</li>
+            <li data-es="2 Masajes Terapéuticos al mes"     data-en="2 Therapeutic Massages per month">2 Masajes Terapéuticos al mes</li>
+            <li data-es="1 Sesión de Aromaterapia"          data-en="1 Aromatherapy Session">1 Sesión de Aromaterapia</li>
+            <li data-es="Descuento del 20% en productos"    data-en="20% discount on products">Descuento del 20% en productos</li>
+            <li data-es="15% de descuento en servicios adicionales" data-en="15% off additional services">15% de descuento en servicios adicionales</li>
           </ul>
         </div>
-        <!-- Radiance -->
         <div class="plan reveal" style="animation-delay:.3s">
-          <p class="plan__name" data-i18n="plans.radiance.name">Radiancia</p>
-          <p class="plan__price">$250<span data-i18n="plans.per">/mes</span></p>
-          <a href="#book" class="btn btn--outline plan__btn" data-i18n="plans.select">Seleccionar</a>
+          <p class="plan__name" data-es="Radiancia" data-en="Radiance">Radiancia</p>
+          <p class="plan__price">$250<span data-es="/mes" data-en="/mo">/mes</span></p>
+          <a href="#book" class="btn btn--outline plan__btn" data-es="Seleccionar" data-en="Select Plan">Seleccionar</a>
           <ul class="plan__features">
-            <li data-i18n="plans.radiance.f1">4 Masajes Terapéuticos al mes</li>
-            <li data-i18n="plans.radiance.f2">2 Sesiones de Aromaterapia</li>
-            <li data-i18n="plans.radiance.f3">1 Sesión de Reflexología</li>
-            <li data-i18n="plans.radiance.f4">Descuento del 30% en todos los servicios</li>
+            <li data-es="4 Masajes Terapéuticos al mes"    data-en="4 Therapeutic Massages per month">4 Masajes Terapéuticos al mes</li>
+            <li data-es="2 Sesiones de Aromaterapia"       data-en="2 Aromatherapy Sessions">2 Sesiones de Aromaterapia</li>
+            <li data-es="1 Sesión de Reflexología"         data-en="1 Reflexology Session">1 Sesión de Reflexología</li>
+            <li data-es="Descuento del 30% en todos los servicios" data-en="30% off all services">Descuento del 30% en todos los servicios</li>
           </ul>
         </div>
       </div>
@@ -234,59 +258,77 @@
   <!-- ───────────── REVIEWS ───────────── -->
   <section class="reviews section" id="reviews">
     <div class="container">
-      <p class="eyebrow text-center" data-i18n="reviews.eyebrow">Testimonios</p>
-      <h2 class="section-title text-center" data-i18n="reviews.title">Tus Historias<br/><em>de Bienestar</em></h2>
+      <p class="eyebrow text-center" data-es="Testimonios"       data-en="Testimonials">Testimonios</p>
+      <h2 class="section-title text-center"
+          data-es="Tus Historias&lt;br/&gt;&lt;em&gt;de Bienestar&lt;/em&gt;"
+          data-en="Your Stories&lt;br/&gt;&lt;em&gt;of Well-being&lt;/em&gt;">
+        Tus Historias<br/><em>de Bienestar</em>
+      </h2>
 
       <div class="reviews__grid">
-
         <div class="review-card reveal">
           <div class="review-card__stars">★★★★★</div>
-          <p class="review-card__text" data-i18n="review1.text">"El mejor masaje que he tenido en mi vida. La terapeuta supo exactamente dónde tenía tensión y la alivió completamente."</p>
+          <p class="review-card__text"
+             data-es="&quot;El mejor masaje que he tenido en mi vida. La terapeuta supo exactamente dónde tenía tensión y la alivió completamente.&quot;"
+             data-en="&quot;The best massage I have ever had. The therapist knew exactly where I had tension and completely relieved it.&quot;">
+            "El mejor masaje que he tenido en mi vida. La terapeuta supo exactamente dónde tenía tensión y la alivió completamente."
+          </p>
           <div class="review-card__author">
             <div class="review-card__avatar">AL</div>
             <div>
               <p class="review-card__name">Ana López</p>
-              <p class="review-card__location" data-i18n="review1.loc">Ciudad de México</p>
+              <p class="review-card__location" data-es="Ciudad de México" data-en="Mexico City">Ciudad de México</p>
             </div>
           </div>
         </div>
 
         <div class="review-card reveal" style="animation-delay:.1s">
           <div class="review-card__stars">★★★★★</div>
-          <p class="review-card__text" data-i18n="review2.text">"Me siento renacida después de cada visita. El ambiente es increíblemente relajante y el equipo muy profesional."</p>
+          <p class="review-card__text"
+             data-es="&quot;Me siento renacida después de cada visita. El ambiente es increíblemente relajante y el equipo muy profesional.&quot;"
+             data-en="&quot;I feel reborn after every visit. The atmosphere is incredibly relaxing and the team is very professional.&quot;">
+            "Me siento renacida después de cada visita. El ambiente es increíblemente relajante y el equipo muy profesional."
+          </p>
           <div class="review-card__author">
             <div class="review-card__avatar">MR</div>
             <div>
               <p class="review-card__name">María Rodríguez</p>
-              <p class="review-card__location" data-i18n="review2.loc">Guadalajara</p>
+              <p class="review-card__location" data-es="Guadalajara" data-en="Guadalajara">Guadalajara</p>
             </div>
           </div>
         </div>
 
         <div class="review-card reveal" style="animation-delay:.2s">
           <div class="review-card__stars">★★★★★</div>
-          <p class="review-card__text" data-i18n="review3.text">"El masaje de tejido profundo resolvió mi dolor de espalda crónico. Llevo 3 meses sin molestias. ¡Totalmente recomendado!"</p>
+          <p class="review-card__text"
+             data-es="&quot;El masaje de tejido profundo resolvió mi dolor de espalda crónico. Llevo 3 meses sin molestias. ¡Totalmente recomendado!&quot;"
+             data-en="&quot;The deep tissue massage solved my chronic back pain. Three months without discomfort. Totally recommended!&quot;">
+            "El masaje de tejido profundo resolvió mi dolor de espalda crónico. Llevo 3 meses sin molestias. ¡Totalmente recomendado!"
+          </p>
           <div class="review-card__author">
             <div class="review-card__avatar">CS</div>
             <div>
               <p class="review-card__name">Carlos Sánchez</p>
-              <p class="review-card__location" data-i18n="review3.loc">Monterrey</p>
+              <p class="review-card__location" data-es="Monterrey" data-en="Monterrey">Monterrey</p>
             </div>
           </div>
         </div>
 
         <div class="review-card reveal" style="animation-delay:.3s">
           <div class="review-card__stars">★★★★★</div>
-          <p class="review-card__text" data-i18n="review4.text">"El masaje prenatal fue una experiencia sublime. Me sentí en las mejores manos durante todo mi embarazo."</p>
+          <p class="review-card__text"
+             data-es="&quot;El masaje prenatal fue una experiencia sublime. Me sentí en las mejores manos durante todo mi embarazo.&quot;"
+             data-en="&quot;The prenatal massage was a sublime experience. I felt in the best hands throughout my pregnancy.&quot;">
+            "El masaje prenatal fue una experiencia sublime. Me sentí en las mejores manos durante todo mi embarazo."
+          </p>
           <div class="review-card__author">
             <div class="review-card__avatar">VP</div>
             <div>
               <p class="review-card__name">Valeria Peña</p>
-              <p class="review-card__location" data-i18n="review4.loc">Cancún</p>
+              <p class="review-card__location" data-es="Cancún" data-en="Cancún">Cancún</p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -298,20 +340,25 @@
       <div class="booking-cta__overlay"></div>
     </div>
     <div class="booking-cta__content reveal">
-      <p class="eyebrow" data-i18n="cta.eyebrow">Reserva Ahora</p>
-      <h2 data-i18n="cta.title">El Bienestar<br/><em>Que Mereces</em></h2>
+      <p class="eyebrow"   data-es="Reserva Ahora"  data-en="Book Now">Reserva Ahora</p>
+      <h2 data-es="El Bienestar&lt;br/&gt;&lt;em&gt;Que Mereces&lt;/em&gt;"
+          data-en="The Wellness&lt;br/&gt;&lt;em&gt;You Deserve&lt;/em&gt;">
+        El Bienestar<br/><em>Que Mereces</em>
+      </h2>
       <div class="booking-cta__form">
-        <input type="text" placeholder="Tu nombre" data-i18n-placeholder="form.name" />
-        <input type="tel"  placeholder="Tu teléfono" data-i18n-placeholder="form.phone" />
+        <input type="text" placeholder="Tu nombre"   data-ph-es="Tu nombre"    data-ph-en="Your name" />
+        <input type="tel"  placeholder="Tu teléfono" data-ph-es="Tu teléfono"  data-ph-en="Your phone" />
         <select>
-          <option data-i18n="form.service">Elige un servicio</option>
-          <option data-i18n="service1">Masaje Terapéutico</option>
-          <option data-i18n="service2">Masaje de Tejido Profundo</option>
-          <option data-i18n="service3">Aromaterapia</option>
-          <option data-i18n="service4">Reflexología</option>
-          <option data-i18n="service5">Masaje Prenatal</option>
+          <option data-es="Elige un servicio"         data-en="Choose a service">Elige un servicio</option>
+          <option data-es="Masaje Terapéutico"        data-en="Therapeutic Massage">Masaje Terapéutico</option>
+          <option data-es="Masaje de Tejido Profundo" data-en="Deep Tissue Massage">Masaje de Tejido Profundo</option>
+          <option data-es="Aromaterapia"              data-en="Aromatherapy">Aromaterapia</option>
+          <option data-es="Reflexología"              data-en="Reflexology">Reflexología</option>
+          <option data-es="Masaje Prenatal"           data-en="Prenatal Massage">Masaje Prenatal</option>
         </select>
-        <button class="btn btn--primary" data-i18n="form.submit">Reservar Ahora</button>
+        <button class="btn btn--primary" id="bookBtn"
+                data-es="Reservar Ahora"
+                data-en="Book Now">Reservar Ahora</button>
       </div>
     </div>
   </section>
@@ -321,20 +368,23 @@
     <div class="footer__ticker">
       <div class="ticker__track ticker__track--slow">
         <span>SERENIDAD</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.f1">MASAJES TERAPÉUTICOS</span> <span class="ticker__dot">✦</span>
+        <span data-es="MASAJES TERAPÉUTICOS" data-en="THERAPEUTIC MASSAGE">MASAJES TERAPÉUTICOS</span> <span class="ticker__dot">✦</span>
         <span>MÉXICO</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.f2">BIENESTAR</span> <span class="ticker__dot">✦</span>
+        <span data-es="BIENESTAR" data-en="WELLNESS">BIENESTAR</span> <span class="ticker__dot">✦</span>
         <span>SERENIDAD</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.f1">MASAJES TERAPÉUTICOS</span> <span class="ticker__dot">✦</span>
+        <span data-es="MASAJES TERAPÉUTICOS" data-en="THERAPEUTIC MASSAGE">MASAJES TERAPÉUTICOS</span> <span class="ticker__dot">✦</span>
         <span>MÉXICO</span> <span class="ticker__dot">✦</span>
-        <span data-i18n="ticker.f2">BIENESTAR</span> <span class="ticker__dot">✦</span>
+        <span data-es="BIENESTAR" data-en="WELLNESS">BIENESTAR</span> <span class="ticker__dot">✦</span>
       </div>
     </div>
 
     <div class="container footer__main">
       <div class="footer__brand">
         <div class="footer__logo">SERENIDAD.</div>
-        <p data-i18n="footer.tagline">Masajes terapéuticos en el corazón de México. Tu bienestar es nuestra misión.</p>
+        <p data-es="Masajes terapéuticos en el corazón de México. Tu bienestar es nuestra misión."
+           data-en="Therapeutic massages in the heart of Mexico. Your well-being is our mission.">
+          Masajes terapéuticos en el corazón de México. Tu bienestar es nuestra misión.
+        </p>
         <div class="footer__socials">
           <a href="#" aria-label="Instagram">IG</a>
           <a href="#" aria-label="Facebook">FB</a>
@@ -343,37 +393,40 @@
       </div>
 
       <div class="footer__nav">
-        <h4 data-i18n="footer.nav">Navegación</h4>
+        <h4 data-es="Navegación" data-en="Navigation">Navegación</h4>
         <ul>
-          <li><a href="#about"    data-i18n="nav.about">Nosotros</a></li>
-          <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
-          <li><a href="#club"     data-i18n="nav.club">Club</a></li>
-          <li><a href="#reviews"  data-i18n="nav.reviews">Reseñas</a></li>
+          <li><a href="#about"    data-es="Nosotros"  data-en="About">Nosotros</a></li>
+          <li><a href="#services" data-es="Servicios" data-en="Services">Servicios</a></li>
+          <li><a href="#club"     data-es="Club"      data-en="Club">Club</a></li>
+          <li><a href="#reviews"  data-es="Reseñas"   data-en="Reviews">Reseñas</a></li>
         </ul>
       </div>
 
       <div class="footer__services">
-        <h4 data-i18n="footer.services">Servicios</h4>
+        <h4 data-es="Servicios" data-en="Services">Servicios</h4>
         <ul>
-          <li><a href="#" data-i18n="service1">Masaje Terapéutico</a></li>
-          <li><a href="#" data-i18n="service2">Masaje de Tejido Profundo</a></li>
-          <li><a href="#" data-i18n="service3">Aromaterapia</a></li>
-          <li><a href="#" data-i18n="service4">Reflexología</a></li>
-          <li><a href="#" data-i18n="service5">Masaje Prenatal</a></li>
+          <li><a href="#" data-es="Masaje Terapéutico"        data-en="Therapeutic Massage">Masaje Terapéutico</a></li>
+          <li><a href="#" data-es="Masaje de Tejido Profundo" data-en="Deep Tissue Massage">Masaje de Tejido Profundo</a></li>
+          <li><a href="#" data-es="Aromaterapia"              data-en="Aromatherapy">Aromaterapia</a></li>
+          <li><a href="#" data-es="Reflexología"              data-en="Reflexology">Reflexología</a></li>
+          <li><a href="#" data-es="Masaje Prenatal"           data-en="Prenatal Massage">Masaje Prenatal</a></li>
         </ul>
       </div>
 
       <div class="footer__contact">
-        <h4 data-i18n="footer.contact">Contacto</h4>
+        <h4 data-es="Contacto" data-en="Contact">Contacto</h4>
         <p>📍 Colonia Polanco, CDMX</p>
         <p>📞 +52 55 1234 5678</p>
         <p>✉️ hola@serenidad.mx</p>
-        <p data-i18n="footer.hours">Lun–Sáb: 9am – 8pm</p>
+        <p data-es="Lun–Sáb: 9am – 8pm" data-en="Mon–Sat: 9am – 8pm">Lun–Sáb: 9am – 8pm</p>
       </div>
     </div>
 
     <div class="footer__bottom">
-      <p data-i18n="footer.copy">© 2025 Serenidad. Todos los derechos reservados.</p>
+      <p data-es="© 2025 Serenidad. Todos los derechos reservados."
+         data-en="© 2025 Serenidad. All rights reserved.">
+        © 2025 Serenidad. Todos los derechos reservados.
+      </p>
     </div>
   </footer>
 
