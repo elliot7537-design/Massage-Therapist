@@ -99,16 +99,18 @@ function initMobileNav() {
    Scroll Reveal (IntersectionObserver)
 ──────────────────────────────────────────── */
 function initReveal() {
-  var els = document.querySelectorAll('.reveal, .clip-reveal');
+  var els = document.querySelectorAll('.reveal, .clip-reveal, .reveal-img');
   if (!('IntersectionObserver' in window)) {
     els.forEach(function(el) { el.classList.add('visible'); });
     return;
   }
+  // rootMargin '200px' on the bottom fires 200px BEFORE the element
+  // enters the viewport — animations finish before the user sees them.
   var obs = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
       if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px 200px 0px' });
   els.forEach(function(el) { obs.observe(el); });
 }
 
