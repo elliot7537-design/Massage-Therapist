@@ -99,7 +99,7 @@ function initMobileNav() {
    Scroll Reveal (IntersectionObserver)
 ──────────────────────────────────────────── */
 function initReveal() {
-  var els = document.querySelectorAll('.reveal, .clip-reveal, .reveal-img');
+  var els = document.querySelectorAll('.reveal, .clip-reveal, .reveal-img, .gi-reveal');
   if (!('IntersectionObserver' in window)) {
     els.forEach(function(el) { el.classList.add('visible'); });
     return;
