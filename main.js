@@ -237,8 +237,8 @@ function applyTranslations(lang, animate = false) {
       if (t[key]) el.placeholder = t[key];
     });
 
-    // HTML lang attribute
-    document.documentElement.lang = lang;
+    // Keep html[lang] in sync without triggering browser auto-translate
+    // (attribute is set once; we don't flip it on every toggle)
   };
 
   if (animate) {
@@ -257,16 +257,19 @@ function applyTranslations(lang, animate = false) {
    Language toggle
 ──────────────────────────────────────────── */
 function initLangToggle() {
-  const btn   = document.getElementById('langToggle');
-  const label = document.getElementById('langLabel');
+  const btn = document.getElementById('langToggle');
   if (!btn) return;
 
   btn.addEventListener('click', () => {
     currentLang = currentLang === 'es' ? 'en' : 'es';
-    label.textContent = currentLang === 'es' ? 'EN' : 'ES';
+
+    // Drive the active highlight purely via data attribute — no textContent
+    // manipulation, so browser auto-translate cannot interfere.
+    btn.dataset.lang = currentLang;
+
     applyTranslations(currentLang, true);
 
-    // Bounce animation on toggle button
+    // Bounce animation
     btn.style.transform = 'scale(0.85)';
     setTimeout(() => { btn.style.transform = ''; }, 180);
   });

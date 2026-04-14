@@ -168,20 +168,31 @@ ul { list-style: none; }
 .lang-toggle {
   display: flex;
   align-items: center;
-  gap: .4rem;
+  gap: .35rem;
   background: var(--cream-2);
   border: 1.5px solid var(--sand);
   border-radius: 100px;
   padding: .4rem .9rem;
   font-size: .8rem;
   font-weight: 700;
-  color: var(--brown);
   cursor: pointer;
   transition: background .2s, transform .2s var(--ease-spring);
 }
-.lang-toggle:hover {
-  background: var(--sand);
-  transform: scale(1.04);
+.lang-toggle:hover { transform: scale(1.04); }
+.lang-toggle__opt {
+  color: var(--text-lt);
+  transition: color .2s, font-weight .2s;
+  letter-spacing: .04em;
+}
+.lang-toggle__sep {
+  color: var(--sand);
+  font-weight: 300;
+}
+/* Active language gets the bold brown colour */
+.lang-toggle[data-lang="es"] .lang-toggle__opt[data-opt="es"],
+.lang-toggle[data-lang="en"] .lang-toggle__opt[data-opt="en"] {
+  color: var(--brown);
+  font-weight: 800;
 }
 
 /* Hamburger (mobile) */
